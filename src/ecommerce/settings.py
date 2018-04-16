@@ -33,9 +33,9 @@ EMAIL_HOST_PASSWORD = 'yourpassword'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-''' 
+'''
 If using gmail, you will need to
-unlock Captcha to enable Django 
+unlock Captcha to enable Django
 to  send for you:
 https://accounts.google.com/displayunlockcaptcha
 '''
@@ -128,9 +128,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static_in_env", "static_root")
-    
-STATICFILES_DIRS = (os.path.join(BASE_DIR, "statics", "our_static"),)
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "statics", "our_static"),)
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
 
